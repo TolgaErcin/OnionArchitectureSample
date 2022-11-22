@@ -1,0 +1,43 @@
+﻿@using ANK_9.Sysstem;
+@using ANK_9.ViewModels.CategoryVMs;
+
+@model ResultService<CategoryBaseVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+@{
+    if (Model.HasError)
+    {
+        <h4>@Model.Errors.ToList().[0].ErrorMessage</h4>
+        <h4>@Model.Errors.ToList().[0].ErrorType</h4>
+    }
+}
+<p>
+    <a asp-action="Create" asp-area="Admin" class="btn btn-success">Create New</a>
+</p>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(x=>x.Data.Name)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListData)
+        {
+            <tr class="row">
+                <td class="col-md-8">@Html.DisplayFor(x=>item.Name)</td>
+                <th class="col-md-4">
+                    @Html.ActionLink("Update","Update",new{ id=item.Id}, new{@class="btn btn-info"})
+                    @Html.ActionLink("Detail","Detail",new{ id=item.Id}, new{@class="btn btn-danger"})
+                    @Html.ActionLink("Delete","Delete",new{ id=item.Id}, new{@class="btn btn-warning"})
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+

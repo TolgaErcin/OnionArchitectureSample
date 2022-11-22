@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>ANK_9.BLL</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Concrete\Service\AdminService\**" />
+    <EmbeddedResource Remove="Concrete\Service\AdminService\**" />
+    <None Remove="Concrete\Service\AdminService\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ANK-9.Core\ANK_9.Core.csproj" />
+    <ProjectReference Include="..\ANK-9.DAL\ANK_9.DAL.csproj" />
+    <ProjectReference Include="..\ANK-9.Entities\ANK_9.Entities.csproj" />
+    <ProjectReference Include="..\ANK_9.Sysstem\ANK_9.Sysstem.csproj" />
+    <ProjectReference Include="..\ANK_9.ViewModels\ANK_9.ViewModels.csproj" />
+  </ItemGroup>
+
+</Project>

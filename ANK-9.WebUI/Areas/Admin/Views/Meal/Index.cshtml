@@ -1,0 +1,50 @@
+﻿@using ANK_9.Sysstem;
+@using ANK_9.ViewModels.MealVMs;
+
+@model ResultService<MealBaseVM>
+
+@{
+    ViewData["Title"] = "Meal List";
+    //Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Meal List</h1>
+
+@{
+    if (Model.HasError)
+    {
+        string errorMessage = Model.Errors.ToList()[0].ErrorMessage;
+        string errorType = Model.Errors.ToList()[0].ErrorType;
+
+        <h4>@errorType</h4>
+        <h4>@errorMessage</h4>
+    }
+}
+
+<p>
+    <button class="btn btn-primary">
+        <a asp-action="Crerate" asp-area="Admin" class="text-black">Create Meal</a>
+    </button>
+</p>
+
+<table class="table border-1">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.Data.MealName)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ListData)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(Model=>item.MealName)
+                </td>
+                <td>
+                    @Html.ActionLink("Update","Update",new{id=item.Id})
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
