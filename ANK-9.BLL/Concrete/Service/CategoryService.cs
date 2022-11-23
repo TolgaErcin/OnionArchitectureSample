@@ -146,12 +146,31 @@ namespace ANK_9.BLL.Concrete.Service
                 _categoryDal.Delete(category);
                 resultService.Data = null;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 resultService.AddError("Silme işlemi başarısız","Kayıt bulunamadı.");
             }
 
             return resultService;
+        }
+
+        public ResultService<CategoryUpdateVM> GetCategoryById(int id)
+        {
+            ResultService<CategoryUpdateVM> result=new ResultService<CategoryUpdateVM>();
+            Category category = _categoryDal.Get(x => x.ID.Equals(id));
+            if (category!=null)
+            {
+                result.Data = new CategoryUpdateVM
+                {
+                    Id = category.ID,
+                    Name = category.CategoryName
+                };
+            }
+            else
+            {
+                result.AddError("Hata","Kayıt bulunamadı");
+            }
+            return result;
         }
     }
 }

@@ -11,7 +11,14 @@ namespace ANK_9.Entities
     {
         public string FoodName { get; set; }
         public string Description { get; set; }
+        public double Calorie { get; set; }
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        public ICollection<MealFood> MealFoods { get; set; }
+        public Food()
+        {
+            IsActive = true;
+            MealFoods= new HashSet<MealFood>();
+        }
     }
 }

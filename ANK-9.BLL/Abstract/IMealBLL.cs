@@ -12,7 +12,7 @@ namespace ANK_9.BLL.Abstract
 {
     public interface IMealBLL:IBaseBLL<Meal>
     {
-        ResultService<Meal> CreateMail(MealCreateVm vm);
+        ResultService<Meal> CreateMeal(MealCreateVm vm);
         ResultService<MealUpdateVM> UpdateMeal(MealUpdateVM vm);
         ResultService<MealBaseVM> DeleteMeal(int id);
         ResultService<Meal> GetMeal(string mealName);

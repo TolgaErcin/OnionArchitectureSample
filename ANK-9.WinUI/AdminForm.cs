@@ -48,5 +48,15 @@ namespace ANK_9.WinUI
             form.Dock = DockStyle.Fill;
             form.Show();
         }
+
+        private void mealToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = default;
+            form = EFContextForm.ConfigureServices<MealList>();
+
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
     }
 }

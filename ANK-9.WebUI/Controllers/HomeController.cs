@@ -41,6 +41,7 @@ namespace ANK_9.WebUI.Controllers
             if (user.Data.UserTypes == UserTypes.Admin)
             {
                 return Redirect("http://localhost:55838/Admin/Home/Index");
+                //return RedirectToAction("Index","meal","admin");
             }
             else
             {

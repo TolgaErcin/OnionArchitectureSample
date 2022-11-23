@@ -118,29 +118,30 @@
             this.mealToolStripMenuItem.Name = "mealToolStripMenuItem";
             this.mealToolStripMenuItem.Size = new System.Drawing.Size(56, 24);
             this.mealToolStripMenuItem.Text = "Meal";
+            this.mealToolStripMenuItem.Click += new System.EventHandler(this.mealToolStripMenuItem_Click);
             // 
             // createToolStripMenuItem3
             // 
             this.createToolStripMenuItem3.Name = "createToolStripMenuItem3";
-            this.createToolStripMenuItem3.Size = new System.Drawing.Size(141, 26);
+            this.createToolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
             this.createToolStripMenuItem3.Text = "Create";
             // 
             // updateToolStripMenuItem3
             // 
             this.updateToolStripMenuItem3.Name = "updateToolStripMenuItem3";
-            this.updateToolStripMenuItem3.Size = new System.Drawing.Size(141, 26);
+            this.updateToolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
             this.updateToolStripMenuItem3.Text = "Update";
             // 
             // deleteToolStripMenuItem3
             // 
             this.deleteToolStripMenuItem3.Name = "deleteToolStripMenuItem3";
-            this.deleteToolStripMenuItem3.Size = new System.Drawing.Size(141, 26);
+            this.deleteToolStripMenuItem3.Size = new System.Drawing.Size(224, 26);
             this.deleteToolStripMenuItem3.Text = "Delete";
             // 
             // listToolStripMenuItem2
             // 
             this.listToolStripMenuItem2.Name = "listToolStripMenuItem2";
-            this.listToolStripMenuItem2.Size = new System.Drawing.Size(141, 26);
+            this.listToolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
             this.listToolStripMenuItem2.Text = "List";
             // 
             // AdminForm

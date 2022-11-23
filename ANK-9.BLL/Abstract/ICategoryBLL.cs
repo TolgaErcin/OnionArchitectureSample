@@ -16,6 +16,7 @@ namespace ANK_9.BLL.Abstract
         //metotların imzası yazıldı
         ResultService<Category> CreateCategory(CategoryNewVm categoryNewVm);
         ResultService<CategoryUpdateVM> UpdateCategory(CategoryUpdateVM categoryUpdateVM);
+        ResultService<CategoryUpdateVM> GetCategoryById(int id);
         ResultService<Category> GetCategoryByName(string categoryName);
         ResultService<CategoryBaseVM> DeleteCategory(int id);
     }

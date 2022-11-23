@@ -1,14 +1,10 @@
-﻿@using ANK_9.Sysstem;
-@using ANK_9.ViewModels.MealVMs;
-
-@model ResultService<MealBaseVM>
+﻿@model ResultService<MealBaseVM>
 
 @{
-    ViewData["Title"] = "Meal List";
-    //Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Index";
 }
 
-<h1>Meal List</h1>
+<h1>Index</h1>
 
 @{
     if (Model.HasError)
@@ -19,32 +15,47 @@
         <h4>@errorType</h4>
         <h4>@errorMessage</h4>
     }
+    if (TempData["Success"]!=null)
+    {
+        <h4>@TempData["Success"].ToString()</h4>
+    }
+    else if (TempData["Errors"] != null)
+    {
+        <h4>@TempData["Errors"].ToString()</h4>
+    }
 }
 
-<p>
-    <button class="btn btn-primary">
-        <a asp-action="Crerate" asp-area="Admin" class="text-black">Create Meal</a>
-    </button>
-</p>
 
-<table class="table border-1">
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
     <thead>
         <tr>
-            <th>@Html.DisplayNameFor(model=>model.Data.MealName)</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data.MealName)
+            </th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.ListData)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(Model=>item.MealName)
-                </td>
-                <td>
-                    @Html.ActionLink("Update","Update",new{id=item.Id})
-                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-                </td>
-            </tr>
-        }
+@foreach (var item in Model.ListData) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MealName)
+            </td>
+            <td>
+                @Html.ActionLink("Update", "Update", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+}
     </tbody>
 </table>

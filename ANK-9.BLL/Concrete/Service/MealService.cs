@@ -19,23 +19,7 @@ namespace ANK_9.BLL.Concrete.Service
         {
             this.mealDAL = mealDAL;
         }
-        public ResultService<Meal> CreateMail(MealCreateVm vm)
-        {
-            ResultService<Meal> result = new ResultService<Meal>();
-            Meal newMeal = new Meal
-            {
-                MealName=vm.MealName,
-                CreateOn=vm.CreateOn,
-            };
-            Meal addMeal = mealDAL.Add(newMeal);
-            if (addMeal==null)
-            {
-                result.AddError("Ekleme İşlemi başarısız","bir sorun oluştu");
-                return result;
-            }
-            result.Data = addMeal;
-            return result;
-        }
+
         public ResultService<MealUpdateVM> UpdateMeal(MealUpdateVM vm)
         {
             ResultService<MealUpdateVM> result = new ResultService<MealUpdateVM>();
@@ -63,6 +47,10 @@ namespace ANK_9.BLL.Concrete.Service
             {
                 Meal meal = mealDAL.Get(x=>x.IsActive==true&&x.ID==id);
                 meal.IsActive = false;
+                result.Data = new MealBaseVM()
+                {
+                    MealName=meal.MealName,
+                };
                 mealDAL.Delete(meal);
             }
             catch (Exception)
@@ -77,6 +65,7 @@ namespace ANK_9.BLL.Concrete.Service
             ResultService<MealBaseVM> result= new ResultService<MealBaseVM>();
             List<MealBaseVM> BaseList = mealDAL.GetAll(x=>x.IsActive).Select(x=> new MealBaseVM()
             {
+                Id=x.ID,
                 MealName=x.MealName
             }).ToList();
             if (BaseList.Count>0)
@@ -112,5 +101,22 @@ namespace ANK_9.BLL.Concrete.Service
             return result;
         }
 
+        public ResultService<Meal> CreateMeal(MealCreateVm vm)
+        {
+            ResultService<Meal> result = new ResultService<Meal>();
+            Meal newMeal = new Meal
+            {
+                MealName = vm.MealName,
+                CreateOn = vm.CreateOn,
+            };
+            Meal addMeal = mealDAL.Add(newMeal);
+            if (addMeal == null)
+            {
+                result.AddError("Ekleme İşlemi başarısız", "bir sorun oluştu");
+                return result;
+            }
+            result.Data = addMeal;
+            return result;
+        }
     }
 }

@@ -14,6 +14,14 @@
         <h4>@Model.Errors.ToList().[0].ErrorMessage</h4>
         <h4>@Model.Errors.ToList().[0].ErrorType</h4>
     }
+    if (TempData["Success"]!=null)
+    {
+        <h4>@TempData["Success"].ToString()</h4>
+    }
+    if (TempData["Errors"] != null)
+    {
+        <h4>@TempData["Errors"].ToString()</h4>
+    }
 }
 <p>
     <a asp-action="Create" asp-area="Admin" class="btn btn-success">Create New</a>
