@@ -12,7 +12,9 @@ namespace ANK_9.DAL.Concrete
             services.AddDbContext<ANK_9DiyetDbContext>()
                     .AddScoped<IUserDAL, UserRepository>()
                     .AddScoped<ICategoryDal,CategoryRepository>()
-                    .AddScoped<IMealDAL, MealRepository>();
+                    .AddScoped<IMealDAL, MealRepository>()
+                    .AddScoped<IFoodDAL, FoodRepository>()
+                    .AddScoped<IMealFoodDAL, MealFoodRepository>();
         }
     }
 }

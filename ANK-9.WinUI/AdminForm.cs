@@ -58,5 +58,25 @@ namespace ANK_9.WinUI
             form.Dock = DockStyle.Fill;
             form.Show();
         }
+
+        private void createToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form form = default;
+            form = EFContextForm.ConfigureServices<CreateFood>();
+
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void listToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form form = default;
+            form = EFContextForm.ConfigureServices<FoodFormList>();
+
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
     }
 }

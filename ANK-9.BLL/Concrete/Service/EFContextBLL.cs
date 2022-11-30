@@ -13,7 +13,8 @@ namespace ANK_9.BLL.Concrete.Service
             services.AddScoped<IUserBLL, UserService>();
             services.AddScoped<ICategoryBLL, CategoryService>();
             services.AddScoped<IMealBLL, MealService>();
-                    
+            services.AddScoped<IMealFoodBLL, MealFoodService>();
+            services.AddScoped<IFoodBLL, FoodService>();
         }
     }
 }

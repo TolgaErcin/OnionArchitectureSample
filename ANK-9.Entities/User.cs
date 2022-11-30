@@ -12,9 +12,12 @@ namespace ANK_9.Entities
 
         public UserTypes UserTypes { get; set; }
 
+        public ICollection<MealFood> MealFoods { get; set; }
+
         public User()
         {
             IsActive = true;
+            this.MealFoods = new HashSet<MealFood>();
         }
     }
 }

@@ -45,7 +45,10 @@ namespace ANK_9.WebUI.Controllers
             }
             else
             {
-                return View(vm);
+                //return Redirect($"https://localhost:7153/Member/Home/Index/{user.Data.ID}");      //1 numara çalışıyor
+                //return RedirectToAction("Index", new { id = currentcoupon.Companyid.id, Area = "Member" });   //2 numara çalıştıramadım
+                return RedirectToAction("Index","Home", new {id=user.Data.ID, Area="Member"});      //3 numara çalışıyor
+                //3 farklı Area yönlendirmesi
             }
 
         }

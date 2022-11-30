@@ -36,7 +36,6 @@ namespace ANK_9.BLL.Concrete.Service
                     User newUser = new User
                     {
                         UserName = vm.UserName,
-
                         Email = vm.Email,
                         Password = vm.Password,
                         UserTypes = vm.UserTypes,
@@ -51,7 +50,6 @@ namespace ANK_9.BLL.Concrete.Service
                 {
                     result.Data = null;
                     result.AddError("Ekleme başarısız", "Kayıt zaten var");
-
                 }
             }
             else
@@ -160,6 +158,14 @@ namespace ANK_9.BLL.Concrete.Service
             }
 
             return result;
+        }
+
+        public ResultService<User> GetUserById(int id)
+        {
+            ResultService<User> result = new ResultService<User>();
+            result.Data=userDAL.Get(x => x.ID.Equals(id) && x.IsActive);
+
+            return result;  
         }
     }
 }

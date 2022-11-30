@@ -25,6 +25,10 @@ namespace ANK_9.DAL.Concrete.Context.Configuration
                 .HasConversion(new EnumToStringConverter<UserTypes>())
                 .IsRequired();
 
+            builder.HasMany(x=>x.MealFoods)
+                .WithOne(x=>x.User)
+                .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Restrict);//restrict diğer tarafı etkilemez
+
             builder.HasData(
                 new User
                 { 

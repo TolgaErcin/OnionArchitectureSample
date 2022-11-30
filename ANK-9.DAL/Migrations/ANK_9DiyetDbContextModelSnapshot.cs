@@ -56,63 +56,63 @@ namespace ANK_9.DAL.Migrations
                         {
                             ID = 1,
                             CategoryName = "Süt Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3056),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9890),
                             IsActive = true
                         },
                         new
                         {
                             ID = 2,
                             CategoryName = "Et Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3060),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9894),
                             IsActive = true
                         },
                         new
                         {
                             ID = 3,
                             CategoryName = "KuruBaklagil Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3060),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9895),
                             IsActive = true
                         },
                         new
                         {
                             ID = 4,
                             CategoryName = "Ekmek Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3061),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9895),
                             IsActive = true
                         },
                         new
                         {
                             ID = 5,
                             CategoryName = "Sebze Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3062),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9896),
                             IsActive = true
                         },
                         new
                         {
                             ID = 6,
                             CategoryName = "Meyve Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3062),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9897),
                             IsActive = true
                         },
                         new
                         {
                             ID = 7,
                             CategoryName = "Yağ Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3063),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9927),
                             IsActive = true
                         },
                         new
                         {
                             ID = 8,
                             CategoryName = "Tatlı Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3064),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9929),
                             IsActive = true
                         },
                         new
                         {
                             ID = 9,
                             CategoryName = "Kuruyemiş Grubu",
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3064),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(9929),
                             IsActive = true
                         });
                 });
@@ -162,7 +162,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 1,
                             Calorie = 11400.0,
                             CategoryId = 1,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5108),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2312),
                             Description = "Bir su bardağı,200 ml",
                             FoodName = "Süt",
                             IsActive = true
@@ -172,7 +172,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 2,
                             Calorie = 69000.0,
                             CategoryId = 2,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5111),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2315),
                             Description = "1 köfte, 30gr",
                             FoodName = "Kıyma",
                             IsActive = true
@@ -182,7 +182,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 3,
                             Calorie = 80000.0,
                             CategoryId = 3,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5112),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2333),
                             Description = "4 yemek kaşığı, 25gr",
                             FoodName = "Mercimek",
                             IsActive = true
@@ -192,7 +192,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 4,
                             Calorie = 68000.0,
                             CategoryId = 4,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5113),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2334),
                             Description = "3 yemek kaşığı, 50gr",
                             FoodName = "Makarna",
                             IsActive = true
@@ -202,7 +202,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 5,
                             Calorie = 25000.0,
                             CategoryId = 5,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5114),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2335),
                             Description = "4 yemek kaşığı, 200gr",
                             FoodName = "Brokoli(Pişmiş)",
                             IsActive = true
@@ -212,7 +212,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 6,
                             Calorie = 60000.0,
                             CategoryId = 6,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5115),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2336),
                             Description = "1 küçük boy, 120gr",
                             FoodName = "Elma",
                             IsActive = true
@@ -222,7 +222,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 7,
                             Calorie = 45000.0,
                             CategoryId = 7,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5115),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2337),
                             Description = "1 tatlı kaşığı, 5gr",
                             FoodName = "Tereyağ",
                             IsActive = true
@@ -232,7 +232,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 8,
                             Calorie = 68000.0,
                             CategoryId = 8,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5116),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2337),
                             Description = "1 yemek kaşığı, 30gr",
                             FoodName = "Bal",
                             IsActive = true
@@ -242,7 +242,7 @@ namespace ANK_9.DAL.Migrations
                             ID = 9,
                             Calorie = 45000.0,
                             CategoryId = 9,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(5117),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(2338),
                             Description = "2 adet, 8gr",
                             FoodName = "Ceviz içi",
                             IsActive = true
@@ -279,21 +279,21 @@ namespace ANK_9.DAL.Migrations
                         new
                         {
                             ID = 1,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3653),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(971),
                             IsActive = true,
                             MealName = "Kahvaltı"
                         },
                         new
                         {
                             ID = 2,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3655),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(973),
                             IsActive = true,
                             MealName = "Öğle Yemeği"
                         },
                         new
                         {
                             ID = 3,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(3656),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 514, DateTimeKind.Local).AddTicks(973),
                             IsActive = true,
                             MealName = "Akşam Yemeği"
                         });
@@ -308,7 +308,7 @@ namespace ANK_9.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
                     b.Property<DateTime>("CreateOn")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2(7)");
 
                     b.Property<int>("FoodId")
                         .HasColumnType("int");
@@ -319,8 +319,11 @@ namespace ANK_9.DAL.Migrations
                     b.Property<int>("MealId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Portion")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("UpdateOn")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime2(7)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -379,7 +382,7 @@ namespace ANK_9.DAL.Migrations
                         new
                         {
                             ID = 1,
-                            CreateOn = new DateTime(2022, 11, 23, 16, 56, 5, 312, DateTimeKind.Local).AddTicks(1598),
+                            CreateOn = new DateTime(2022, 11, 24, 9, 56, 43, 513, DateTimeKind.Local).AddTicks(8517),
                             Email = "adin@gmail.com",
                             IsActive = true,
                             Password = "admin123",
@@ -404,19 +407,19 @@ namespace ANK_9.DAL.Migrations
                     b.HasOne("ANK_9.Entities.Food", "Food")
                         .WithMany("MealFoods")
                         .HasForeignKey("FoodId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ANK_9.Entities.Meal", "Meal")
-                        .WithMany()
+                        .WithMany("MealFoods")
                         .HasForeignKey("MealId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ANK_9.Entities.User", "User")
-                        .WithMany()
+                        .WithMany("MealFoods")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Food");
@@ -432,6 +435,16 @@ namespace ANK_9.DAL.Migrations
                 });
 
             modelBuilder.Entity("ANK_9.Entities.Food", b =>
+                {
+                    b.Navigation("MealFoods");
+                });
+
+            modelBuilder.Entity("ANK_9.Entities.Meal", b =>
+                {
+                    b.Navigation("MealFoods");
+                });
+
+            modelBuilder.Entity("ANK_9.Entities.User", b =>
                 {
                     b.Navigation("MealFoods");
                 });

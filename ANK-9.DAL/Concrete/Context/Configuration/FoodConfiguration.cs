@@ -17,7 +17,13 @@ namespace ANK_9.DAL.Concrete.Context.Configuration
             builder.Property(x => x.Description).HasMaxLength(200).IsRequired();
             builder.HasOne(x => x.Category).WithMany(x => x.Foods).HasForeignKey(x=>x.CategoryId).OnDelete(DeleteBehavior.Restrict);
             //Cascade: bağlı olduğu nesne silinirse null a çeker. Restrict: silmesine izin vermez.
-            builder.HasMany(x => x.MealFoods).WithOne(x => x.Food).HasForeignKey(x=>x.FoodId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(x => x.MealFoods)
+                .WithOne(x => x.Food)
+                .HasForeignKey(x=>x.FoodId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            
+
             base.Configure(builder);
 
             builder.HasData(

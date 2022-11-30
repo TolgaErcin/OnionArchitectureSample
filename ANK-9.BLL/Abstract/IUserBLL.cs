@@ -13,5 +13,6 @@ namespace ANK_9.BLL.Abstract
         ResultService<User> GetUserByUserName(string name);
         ResultService<UserUpdateVM> UpdateUser(UserUpdateVM vm);
         ResultService<UserBaseVM> DeleteUser(UserBaseVM vm);
+        ResultService<User> GetUserById(int id);
     }
 }

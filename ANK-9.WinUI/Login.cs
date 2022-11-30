@@ -52,6 +52,7 @@ namespace ANK_9.WinUI
                 MessageBox.Show(error, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            UserFormUI.Id = user.Data.ID;
 
             Form frm = default;
 
@@ -69,5 +70,12 @@ namespace ANK_9.WinUI
             this.Close();
         }
 
+        private void btn_register_Click(object sender, EventArgs e)
+        {
+            Form frm = EFContextForm.ConfigureServices<Register>();
+            frm.ShowDialog();
+            this.Hide();
+            this.Show();
+        }
     }
 }

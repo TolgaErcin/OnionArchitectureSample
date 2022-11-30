@@ -23,6 +23,7 @@ namespace ANK_9.DAL.Concrete.Context
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new MealConfiguration());
             modelBuilder.ApplyConfiguration(new FoodConfiguration());
+            modelBuilder.ApplyConfiguration(new MealFoodConfiguration());
         }
     }
 }

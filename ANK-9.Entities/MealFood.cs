@@ -9,11 +9,19 @@ namespace ANK_9.Entities
 {
     public class MealFood:BaseEntity
     {
+        public int Portion { get; set; }
+
         public int UserId { get; set; }
         public User User { get; set; }
+
         public int FoodId { get; set; }
         public Food Food { get; set; }
+
         public int MealId { get; set; }
         public Meal Meal { get; set; }
+        public MealFood()
+        {
+            IsActive = true;
+        }
     }
 }

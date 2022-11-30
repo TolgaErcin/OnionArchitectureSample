@@ -16,6 +16,10 @@ namespace ANK_9.DAL.Concrete.Context.Configuration
 
             builder.Property(x => x.MealName).IsRequired().HasMaxLength(50);
 
+            builder.HasMany(x=>x.MealFoods)
+                .WithOne(x=>x.Meal)
+                .OnDelete(Microsoft.EntityFrameworkCore.DeleteBehavior.Restrict);
+
             builder.HasData(
                 new Meal { ID=1,MealName="Kahvaltı",IsActive=true,CreateOn=DateTime.Now},
                 new Meal { ID=2,MealName="Öğle Yemeği",IsActive=true,CreateOn=DateTime.Now},
